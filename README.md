@@ -18,7 +18,7 @@ $ meteor add antalakas:autoform-bs-daterangepicker
 SearchSchema = new SimpleSchema({
 
   searchRange: {
-    type: String,
+    type: [Date],
     label: "From-To",
     autoform:
       type: "dateRange"
