@@ -19,9 +19,19 @@ SearchSchema = new SimpleSchema({
 
   searchRange: {
     type: [Date],
-    label: "From-To",
-    autoform:
-      type: "dateRange"
+    label: "From - To",
+    optional: true,
+    autoform: {
+      type: "dateRange",
+      dateRangePickerValue: "01/01/2015 - 01/31/2015",
+      dateRangePickerOptions: {
+        timePicker: true,
+        format: 'MM/DD/YYYY h:mm A',
+        timePickerIncrement: 30,
+        timePicker12Hour: true,
+        timePickerSeconds: false
+      }
+    }
   },
 
   ...

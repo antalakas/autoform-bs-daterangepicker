@@ -22,6 +22,10 @@ AutoForm.addInputType('dateRange', {
 Template.afDateRangePicker.helpers({
   dataSchemaKey: function() {
     return this.atts['data-schema-key'];
+  },
+  dateRangePickerValue: function() {
+    return this.atts['dateRangePickerValue'];  //console.log($input);
+    //console.log(data);
   }
 });
 
@@ -30,11 +34,8 @@ Template.afDateRangePicker.rendered = function () {
   var $input = this.$('input');
   var data = this.data;
 
-  //console.log($input);
-  //console.log(data);
-
   $input.daterangepicker(
-      null,
+      data.atts.dateRangePickerOptions,
       function(start, end) {
 
         range.startDate = start;
