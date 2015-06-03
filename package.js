@@ -1,6 +1,6 @@
 Package.describe({
   name: 'antalakas:autoform-bs-daterangepicker',
-  version: '0.1.1',
+  version: '0.1.2',
   summary: 'Enables usage of bootstrap daterangepicker in autoform',
   git: 'https://github.com/antalakas/autoform-bs-daterangepicker',
   documentation: 'README.md'
