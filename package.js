@@ -1,12 +1,8 @@
 Package.describe({
   name: 'antalakas:autoform-bs-daterangepicker',
-  version: '0.1.0',
-  // Brief, one-line summary of the package.
+  version: '0.1.1',
   summary: 'Enables usage of bootstrap daterangepicker in autoform',
-  // URL to the Git repository containing the source code for this package.
   git: 'https://github.com/antalakas/autoform-bs-daterangepicker',
-  // By default, Meteor will default to using README.md for documentation.
-  // To avoid submitting documentation, set this field to null.
   documentation: 'README.md'
 });
 
