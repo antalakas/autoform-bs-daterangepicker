@@ -20,15 +20,20 @@ SearchSchema = new SimpleSchema({
   searchRange: {
     type: [Date],
     label: "From - To",
-    optional: true,
+    optional: false,
     autoform: {
-      type: "dateRange",
-      dateRangePickerValue: "01/01/2015 - 01/31/2015",
+      type: "bootstrap-daterangepicker",
+      dateRangePickerValue: moment().add(1, 'days').format("DD/MM/YYYY") + " - " + moment().add(3, 'days').format("DD/MM/YYYY"),
       dateRangePickerOptions: {
-        timePicker: true,
-        format: 'MM/DD/YYYY h:mm A',
+        dateLimit: { days: 6 },
+        minDate: moment().add(-150, 'days').toDate(),
+        maxDate:moment().add(6, 'months').toDate(),
+        startDate: moment().add(1, 'days').toDate(),
+        endDate: moment().add(3, 'days').toDate(),
+        timePicker: false,
+        format: 'DD/MM/YYYY',
         timePickerIncrement: 30,
-        timePicker12Hour: true,
+        timePicker12Hour: false,
         timePickerSeconds: false
       }
     }
