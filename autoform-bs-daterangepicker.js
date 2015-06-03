@@ -36,6 +36,12 @@ Template.afBootstrapDateRangePicker.rendered = function () {
   var $input = this.$('input');
   var data = this.data;
 
+  if (data.atts.dateRangePickerOptions.startDate)
+    range.startDate = data.atts.dateRangePickerOptions.startDate;
+
+  if (data.atts.dateRangePickerOptions.endDate)
+    range.endDate = data.atts.dateRangePickerOptions.endDate;
+
   // instanciate datepicker
   $input.daterangepicker(
       data.atts.dateRangePickerOptions,
