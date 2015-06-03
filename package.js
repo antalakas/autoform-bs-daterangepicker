@@ -14,7 +14,6 @@ Package.onUse(function(api) {
   api.versionsFrom(['METEOR@0.9.3', 'METEOR@0.9.4', 'METEOR@1.0']);
 
   api.use('standard-app-packages', ['client', 'server']);
-  api.use('bootstrap@0.3.1');
   api.use('aldeed:autoform@4.0.0 || 5.0.0');
 
   api.addFiles('lib/moment.js', 'client');
